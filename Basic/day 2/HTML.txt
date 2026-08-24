@@ -1,0 +1,15 @@
+HTML
+	HTML stands for hyper text markup language to structure your information and layout to make a webpages.
+	HTML is structure your un-structured data html is not a programming language. its a markup language.
+
+What is hyper?
+	Hyper is between two thinks connected (connected or link).
+
+What is text?
+	Text that content are written information display on page.
+
+What is markup?
+	Markup means using special tags to describe the structure and meaning of content.
+
+what is language?
+	A language a system with rules and syntax used to communicate between user to system.
