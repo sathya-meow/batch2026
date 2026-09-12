@@ -1,0 +1,57 @@
+.style1{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+}
+.sty1{
+    background-color: aqua;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+.sty2{
+    background-color: aqua;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.2s;
+} 
+.sty3{
+    background-color: aqua;
+    width: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+img{
+    width: 200px;
+    border-radius: 20px;
+}
+button{
+    background-color: rgb(148, 21, 5);
+    color: aliceblue;
+    display: block;
+    margin: auto;
+}
+span{
+    background-color: rgb(202, 193, 202);
+    color: rgb(20, 23, 26);
+    padding: 2px;
+    border-radius: 8px;
+}
+p{
+    font-size: small;
+}
+.sty1:hover{
+    transform: scale(1.05);
+}
+.sty2:hover{
+    transform: scale(1.05);
+}
+.sty3:hover{
+    transform: scale(1.05);
+}
