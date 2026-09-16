@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+header {
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    gap: 50px;
+    border-bottom: 1px solid #ddd;
+}
+.logo {
+    background-color: yellow;
+    padding: 18px 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+.travel {
+    background-color: pink;
+    padding: 18px 70px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.location {
+    margin-left: auto;
+    border: 1px solid darkgray;
+    padding: 12px 20px;
+}
+.search-area {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 40px;
+}
+.search-box {
+    width: 55%;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+    padding: 12px;
+}
+.search-box input {
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.login, .more, .cart {
+    font-size: 16px;
+    font-weight: bold;
+}
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+nav a {
+    text-decoration: none;
+    color: darkgray;
+    font-weight: 500;
+}
+nav a:hover {
+    color: hotpink;
+}
+.offers {
+    background-color: white;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+.offer-card {
+    width: 45%;
+    padding: 10px;
+    text-align: center;
+}
+.offer-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.offer-card p {
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+.offer-card h3 {
+    margin-top: 5px;
+    color: hotpink;
+}
+.flash-sale {
+    width: 90%;
+    min-height: 190px;
+    margin: 20px auto;
+    border-radius: 15px;
+    background: linear-gradient(90deg, deeppink, skyblue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.flash-text h1 {
+    font-size: 42px;
+    color: white;
+    text-shadow: 2px 2px lightgray;
+}
+.sale-content {
+    text-align: center;
+}
+.sale-content h1 {
+    font-size: 36px;
+    color: yellow;
+    margin: 5px;
+}
+.sale-content p {
+    font-size: 22px;
+    margin: 10px;
+}
+.sale-content span {
+    background-color: white;
+    color: deeppink;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
