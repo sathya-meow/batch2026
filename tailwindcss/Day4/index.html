@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2040 / OFFLINE — Life Beyond the Smartphone</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={
+ theme:{extend:{
+  fontFamily:{display:['Georgia','serif'],sans:['Inter','ui-sans-serif','system-ui']},
+  colors:{paper:'#f7f1e7',ink:'#171412',coral:'#ef6f61',sage:'#8fa48b',lav:'#a99ad9',peach:'#f3b18a'}
+ }
+}
+}
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{background:#f7f1e7;color:#171412;overflow-x:hidden}
+.paper{background-image:radial-gradient(rgba(23,20,18,.055) .7px,transparent .7px);background-size:8px 8px}
+.gridpaper{background-image:linear-gradient(rgba(23,20,18,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,20,18,.055) 1px,transparent 1px);background-size:28px 28px}
+.blob{animation:float 9s ease-in-out infinite}.blob2{animation:float2 12s ease-in-out infinite}
+@keyframes float{50%{transform:translate(25px,-20px) rotate(8deg)}}@keyframes float2{50%{transform:translate(-25px,25px)}}
+.reveal{animation:up .8s ease both}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.card{background:rgba(255,252,246,.78);border:1px solid rgba(23,20,18,.1);box-shadow:0 18px 50px rgba(78,56,36,.09);backdrop-filter:blur(10px)}
+.card:hover{box-shadow:0 25px 60px rgba(78,56,36,.15)}
+.hand{font-family:"Comic Sans MS",cursive}
+.marquee{white-space:nowrap;animation:move 20s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+.modal{transition:opacity .25s ease}.modal-box{transition:transform .3s ease;transform:translateY(15px)}.modal.show{opacity:1;pointer-events:auto}.modal.show .modal-box{transform:translateY(0)}
+.line{background:linear-gradient(#ef6f61,#a99ad9,#8fa48b)}
+</style>
+</head>
+<body class="paper font-sans">
+
+<!-- NAV -->
+<header class="fixed top-0 z-50 w-full bg-[#f7f1e7]/90 backdrop-blur-md border-b border-black/10">
+<nav class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+<a href="#home" class="font-black text-lg tracking-tight">2040<span class="text-[#ef6f61]">/</span>OFFLINE</a>
+<div class="hidden lg:flex gap-6 text-sm font-semibold">
+<a href="#story">Story</a><a href="#systems">Systems</a><a href="#timeline">Timeline</a><a href="#questions">Questions</a><a href="#future">Future</a>
+</div>
+<a href="#story" class="rounded-full bg-[#171412] text-white px-4 py-2 text-sm font-bold">Explore 2040 →</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative min-h-screen pt-28 overflow-hidden">
+<div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#ef6f61]/25 blur-3xl blob"></div>
+<div class="absolute top-20 right-0 w-[30rem] h-[30rem] rounded-full bg-[#a99ad9]/30 blur-3xl blob2"></div>
+<div class="absolute bottom-0 left-1/3 w-80 h-56 rounded-full bg-[#8fa48b]/25 blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-5 min-h-[calc(100vh-7rem)] grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center">
+<div class="reveal">
+<p class="hand text-xl text-[#ef6f61]">A future experiment · 2040</p>
+<h1 class="font-display text-6xl md:text-8xl leading-[.84] mt-5">A DAY<br><i>WITHOUT</i><br><span class="text-[#ef6f61]">YOUR PHONE.</span></h1>
+<p class="mt-7 text-lg leading-8 max-w-xl text-black/65">What if your phone disappeared tomorrow — but life became more connected, more natural and more intelligent?</p>
+<div class="mt-8 flex flex-wrap gap-3">
+<a href="#story" class="px-6 py-3 rounded-full bg-[#171412] text-white font-bold hover:scale-105 transition">Start the story ↓</a>
+<a href="#systems" class="px-6 py-3 rounded-full border border-black/15 font-bold">See the technology</a>
+</div>
+<div class="mt-10 grid grid-cols-3 max-w-md gap-4">
+<div><b class="text-2xl">2040</b><p class="text-xs text-black/45">future day</p></div>
+<div><b class="text-2xl">00</b><p class="text-xs text-black/45">phone screens</p></div>
+<div><b class="text-2xl">∞</b><p class="text-xs text-black/45">possibilities</p></div>
+</div>
+</div>
+<div class="relative h-[530px] flex items-center justify-center">
+<div class="absolute w-80 h-80 rounded-full bg-[#f3b18a]/45 blur-2xl"></div>
+<div class="relative w-64 h-[430px] bg-[#171412] rounded-[40px] rotate-[-8deg] shadow-2xl p-3">
+<div class="h-full rounded-[30px] bg-[#eee3d3] flex flex-col items-center justify-center text-center p-6">
+<span class="text-7xl">📵</span><h2 class="font-display text-4xl mt-5">No phone.</h2><p class="text-black/50 mt-2">Life still works.</p>
+</div></div>
+<div class="absolute top-10 right-3 bg-white shadow-xl px-5 py-4 rotate-6"><p class="hand text-xl">“Put it down.”</p><p class="text-xs text-black/40">— future you</p></div>
+<div class="absolute bottom-12 left-2 bg-[#e7cfa4] px-8 py-3 -rotate-3"><p class="hand">THE 2040 EXPERIMENT</p></div>
+</div></div></section>
+
+<div class="bg-[#171412] text-[#f7f1e7] py-3 overflow-hidden text-xs md:text-sm font-bold tracking-[.2em]">
+<div class="marquee inline-flex gap-10">WAKE UP · LEARN · TRAVEL · CONNECT · PAY · CREATE · SLEEP · REPEAT · WAKE UP · LEARN · TRAVEL · CONNECT · PAY · CREATE · SLEEP · REPEAT ·</div>
+</div>
+
+<!-- STORY INTRO -->
+<section id="story" class="py-24">
+<div class="max-w-7xl mx-auto px-5">
+<div class="max-w-3xl">
+<p class="text-[#ef6f61] font-bold uppercase tracking-[.25em] text-xs">Tap through the day</p>
+<h2 class="font-display text-5xl md:text-6xl mt-4">One day. Seven moments. Zero smartphones.</h2>
+<p class="text-black/55 mt-5 leading-7">Click each moment to discover how everyday life could work when technology moves out of our pockets and into our surroundings.</p>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+<button onclick="openModal('wake')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🌅</span><p class="text-[#ef6f61] text-xs font-bold mt-7">07:00 AM</p><h3 class="font-display text-2xl mt-1">Wake Up</h3><p class="text-sm text-black/45 mt-2">Your room becomes the alarm.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('learn')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🎓</span><p class="text-[#a99ad9] text-xs font-bold mt-7">09:30 AM</p><h3 class="font-display text-2xl mt-1">Learn</h3><p class="text-sm text-black/45 mt-2">Education leaves the rectangle.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('travel')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🚆</span><p class="text-[#8fa48b] text-xs font-bold mt-7">12:10 PM</p><h3 class="font-display text-2xl mt-1">Travel</h3><p class="text-sm text-black/45 mt-2">Directions appear around you.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('pay')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">💳</span><p class="text-[#ef6f61] text-xs font-bold mt-7">02:20 PM</p><h3 class="font-display text-2xl mt-1">Pay</h3><p class="text-sm text-black/45 mt-2">The wallet becomes invisible.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('work')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">💻</span><p class="text-[#a99ad9] text-xs font-bold mt-7">04:00 PM</p><h3 class="font-display text-2xl mt-1">Work</h3><p class="text-sm text-black/45 mt-2">Your workspace follows you.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('connect')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🫂</span><p class="text-[#8fa48b] text-xs font-bold mt-7">06:40 PM</p><h3 class="font-display text-2xl mt-1">Connect</h3><p class="text-sm text-black/45 mt-2">Presence replaces notifications.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('home')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🏠</span><p class="text-[#ef6f61] text-xs font-bold mt-7">08:30 PM</p><h3 class="font-display text-2xl mt-1">Go Home</h3><p class="text-sm text-black/45 mt-2">Your home understands context.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+<button onclick="openModal('sleep')" class="card text-left rounded-[2rem] p-6 hover:-translate-y-2 transition"><span class="text-4xl">🌙</span><p class="text-[#a99ad9] text-xs font-bold mt-7">10:30 PM</p><h3 class="font-display text-2xl mt-1">Sleep</h3><p class="text-sm text-black/45 mt-2">No last scroll. Just sleep.</p><span class="inline-block mt-5 text-sm font-bold">Open story →</span></button>
+</div>
+</div></section>
+
+<!-- SYSTEMS -->
+<section id="systems" class="py-28 bg-[#e9e0d2]">
+<div class="max-w-7xl mx-auto px-5">
+<div class="text-center max-w-3xl mx-auto"><p class="text-[#8fa48b] font-bold uppercase tracking-[.25em] text-xs">What replaces the phone?</p><h2 class="font-display text-5xl md:text-6xl mt-4">A whole ecosystem of small technologies.</h2><p class="text-black/55 mt-4">Click a card to learn what each system could do.</p></div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-14">
+<button onclick="openModal('ar')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">🥽</div><h3 class="font-display text-3xl mt-6">AR Glasses</h3><p class="text-black/50 mt-2">Information appears when you need it.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+<button onclick="openModal('voice')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">🎙️</div><h3 class="font-display text-3xl mt-6">Voice AI</h3><p class="text-black/50 mt-2">Ask instead of typing and searching.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+<button onclick="openModal('smart')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">🏠</div><h3 class="font-display text-3xl mt-6">Smart Spaces</h3><p class="text-black/50 mt-2">Rooms react to context, not buttons.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+<button onclick="openModal('biometric')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">🪪</div><h3 class="font-display text-3xl mt-6">Digital Identity</h3><p class="text-black/50 mt-2">Secure identity without carrying a screen.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+<button onclick="openModal('wearable')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">⌚</div><h3 class="font-display text-3xl mt-6">Wearables</h3><p class="text-black/50 mt-2">Small devices quietly monitor and assist.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+<button onclick="openModal('city')" class="card text-left rounded-[2rem] p-7 hover:-translate-y-2 transition"><div class="text-5xl">🌐</div><h3 class="font-display text-3xl mt-6">Connected World</h3><p class="text-black/50 mt-2">Transport and public spaces communicate.</p><span class="font-bold inline-block mt-5">Explore →</span></button>
+</div></div></section>
+
+<!-- TIMELINE -->
+<section id="timeline" class="py-28">
+<div class="max-w-5xl mx-auto px-5">
+<div class="text-center"><p class="text-[#ef6f61] font-bold uppercase tracking-[.25em] text-xs">How did we get here?</p><h2 class="font-display text-5xl md:text-6xl mt-4">From phone → to invisible technology</h2></div>
+<div class="relative mt-16"><div class="absolute left-5 md:left-1/2 top-0 bottom-0 w-1 line rounded-full"></div>
+<div class="space-y-10">
+<div class="relative md:grid md:grid-cols-2 md:gap-12"><div class="ml-12 md:ml-0 card rounded-3xl p-6"><b class="text-[#ef6f61]">2026</b><h3 class="font-display text-2xl mt-1">The phone is everything</h3><p class="text-sm text-black/50 mt-2">Communication, maps, shopping, entertainment, payments and learning live inside one screen.</p></div><span class="absolute left-3.5 md:left-1/2 md:-translate-x-1/2 top-7 w-4 h-4 bg-[#ef6f61] rounded-full border-4 border-[#f7f1e7]"></span></div>
+<div class="relative md:grid md:grid-cols-2 md:gap-12"><div></div><div class="ml-12 md:ml-0 card rounded-3xl p-6"><b class="text-[#a99ad9]">2030</b><h3 class="font-display text-2xl mt-1">Wearables become normal</h3><p class="text-sm text-black/50 mt-2">Voice assistants, smart glasses and connected environments become more useful.</p></div><span class="absolute left-3.5 md:left-1/2 md:-translate-x-1/2 top-7 w-4 h-4 bg-[#a99ad9] rounded-full border-4 border-[#f7f1e7]"></span></div>
+<div class="relative md:grid md:grid-cols-2 md:gap-12"><div class="ml-12 md:ml-0 card rounded-3xl p-6"><b class="text-[#8fa48b]">2035</b><h3 class="font-display text-2xl mt-1">Spaces become intelligent</h3><p class="text-sm text-black/50 mt-2">Homes, schools, transport and workplaces respond to people and context.</p></div><span class="absolute left-3.5 md:left-1/2 md:-translate-x-1/2 top-7 w-4 h-4 bg-[#8fa48b] rounded-full border-4 border-[#f7f1e7]"></span></div>
+<div class="relative md:grid md:grid-cols-2 md:gap-12"><div></div><div class="ml-12 md:ml-0 card rounded-3xl p-6"><b class="text-[#ef6f61]">2040</b><h3 class="font-display text-2xl mt-1">The phone becomes optional</h3><p class="text-sm text-black/50 mt-2">Technology is distributed across the environment instead of concentrated in one device.</p></div><span class="absolute left-3.5 md:left-1/2 md:-translate-x-1/2 top-7 w-4 h-4 bg-[#ef6f61] rounded-full border-4 border-[#f7f1e7]"></span></div>
+</div></div></div></section>
+
+<!-- QUESTIONS -->
+<section id="questions" class="py-28 bg-[#25201d] text-[#f7f1e7]">
+<div class="max-w-7xl mx-auto px-5"><div class="max-w-3xl"><p class="text-[#f3b18a] font-bold uppercase tracking-[.25em] text-xs">The uncomfortable part</p><h2 class="font-display text-5xl md:text-6xl mt-4">A phone-free future sounds exciting. But should we trust it?</h2><p class="text-white/55 mt-5">Technology can make life easier, but a connected world also creates new questions.</p></div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+<button onclick="openModal('privacy')" class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left hover:bg-white/10 transition"><span class="text-3xl">🔐</span><h3 class="font-bold mt-5">Privacy</h3><p class="text-white/45 text-sm mt-2">Who sees the data?</p></button>
+<button onclick="openModal('security')" class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left hover:bg-white/10 transition"><span class="text-3xl">🛡️</span><h3 class="font-bold mt-5">Security</h3><p class="text-white/45 text-sm mt-2">What if systems fail?</p></button>
+<button onclick="openModal('access')" class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left hover:bg-white/10 transition"><span class="text-3xl">🌍</span><h3 class="font-bold mt-5">Access</h3><p class="text-white/45 text-sm mt-2">Who gets the technology?</p></button>
+<button onclick="openModal('human')" class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left hover:bg-white/10 transition"><span class="text-3xl">🧠</span><h3 class="font-bold mt-5">Human choice</h3><p class="text-white/45 text-sm mt-2">Can we switch off?</p></button>
+</div></div></section>
+
+<!-- FINAL -->
+<section id="future" class="py-32 gridpaper relative overflow-hidden">
+<div class="max-w-5xl mx-auto px-5 text-center relative">
+<p class="hand text-xl text-[#ef6f61]">The final question</p>
+<h2 class="font-display text-5xl md:text-7xl mt-5 leading-tight">Maybe the future isn't a better phone.</h2>
+<h3 class="font-display text-4xl md:text-6xl italic text-[#ef6f61] mt-3">Maybe it's a world where we don't need one.</h3>
+<p class="max-w-2xl mx-auto mt-7 text-black/55 leading-7">Technology can disappear from our hands without disappearing from our lives. The interesting question is not what replaces the phone — it is what kind of life we build after it.</p>
+<a href="#home" class="inline-block mt-9 px-7 py-3 rounded-full bg-[#171412] text-white font-bold">↟ Restart the day</a>
+</div></section>
+<footer class="border-t border-black/10 py-8 text-center text-sm text-black/45">2040/OFFLINE · Future concept · Built with HTML + Tailwind CSS + JavaScript</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal fixed inset-0 z-[100] bg-black/50 opacity-0 pointer-events-none flex items-center justify-center p-5" onclick="closeModal(event)">
+<div class="modal-box bg-[#f7f1e7] max-w-2xl w-full max-h-[85vh] overflow-auto rounded-[2rem] p-7 md:p-10 shadow-2xl" onclick="event.stopPropagation()">
+<div class="flex justify-between items-start"><div id="mIcon" class="text-5xl"></div><button onclick="closeModal()" class="w-10 h-10 rounded-full bg-black/10 text-xl">×</button></div>
+<p id="mTime" class="text-xs font-bold tracking-[.2em] mt-6 text-[#ef6f61]"></p><h2 id="mTitle" class="font-display text-4xl md:text-5xl mt-2"></h2><p id="mText" class="text-black/60 leading-7 mt-5"></p>
+<div id="mPoints" class="grid sm:grid-cols-2 gap-3 mt-7"></div>
+<div class="mt-8 p-5 rounded-2xl bg-black/[.04]"><b>Think about it:</b><p id="mQuestion" class="text-black/55 mt-1"></p></div>
+</div></div>
+
+<script>
+const data={
+wake:{icon:"🌅",time:"07:00 AM · MORNING",title:"Your room becomes your alarm",text:"In this imagined 2040, waking up does not start with reaching for a phone. Your environment becomes the interface.",points:["☀️ Adaptive light","🌡️ Gentle temperature change","🎙️ Voice-first information","🪞 Smart mirror schedule"],q:"Would you miss checking your phone first thing in the morning?"},
+learn:{icon:"🎓",time:"09:30 AM · LEARNING",title:"Education leaves the rectangle",text:"Instead of staring at a small screen, students could interact with 3D models, AR objects and AI tutors inside physical spaces.",points:["🥽 AR learning","🤖 AI tutor","🧩 Interactive simulations","🌐 Remote classrooms"],q:"Would learning become more interesting if information could appear around you?"},
+travel:{icon:"🚆",time:"12:10 PM · TRAVEL",title:"Directions appear around you",text:"Your route could be shown through wearable displays or the transport system itself, reducing the need to hold a map in your hand.",points:["🧭 AR directions","🚦 Smart traffic","🚌 Connected transport","📍 Context-aware routes"],q:"Would you prefer directions in your surroundings instead of a map screen?"},
+pay:{icon:"💳",time:"02:20 PM · PAYMENT",title:"The wallet becomes invisible",text:"Secure contactless and biometric systems could allow purchases without opening a banking or payment app.",points:["🔒 Secure identity","📱 No payment app","⚡ Faster checkout","🧾 Digital receipt"],q:"How much convenience should we exchange for privacy?"},
+work:{icon:"💻",time:"04:00 PM · WORK",title:"Your workspace follows you",text:"Displays, voice assistants and shared digital environments could make the physical office less dependent on one personal screen.",points:["🖥️ Ambient displays","🎙️ Voice controls","🤝 Mixed reality meetings","☁️ Cloud workspace"],q:"Would you work better with fewer screens or more intelligent ones?"},
+connect:{icon:"🫂",time:"06:40 PM · CONNECTION",title:"Presence replaces notifications",text:"Communication could move toward voice, wearable displays and immersive calls instead of constantly checking messages.",points:["👓 Wearable calls","🎙️ Voice messages","🌎 Holographic meetings","🔕 Fewer notifications"],q:"Would less notification pressure make conversations feel more meaningful?"},
+home:{icon:"🏠",time:"08:30 PM · HOME",title:"Your home understands context",text:"A connected home could adjust lights, temperature, music and security based on routines and voice commands.",points:["💡 Adaptive lighting","🌡️ Climate control","🔐 Smart security","🎵 Ambient media"],q:"How much control should a home have over itself?"},
+sleep:{icon:"🌙",time:"10:30 PM · NIGHT",title:"No last scroll. Just sleep.",text:"The day ends without a glowing screen. Your home can prepare tomorrow while you disconnect.",points:["🌙 Calm lighting","😴 Sleep support","⏰ Gentle wake-up","📵 Screen-free night"],q:"Could you fall asleep without one final look at your phone?"},
+ar:{icon:"🥽",time:"TECHNOLOGY · AR",title:"AR glasses",text:"Augmented reality could place useful information in your field of view without requiring a phone screen.",points:["🧭 Navigation","📝 Live notes","🌐 Translation","👥 Remote collaboration"],q:"When does helpful information become too much information?"},
+voice:{icon:"🎙️",time:"TECHNOLOGY · AI",title:"Voice AI",text:"Natural conversation could replace many taps, searches and menus. The goal would be to ask for an outcome rather than operate an app.",points:["🗣️ Natural language","🔎 Search by voice","📅 Schedule tasks","🧠 Context-aware help"],q:"Would you rather talk to technology than tap through menus?"},
+smart:{icon:"🏠",time:"TECHNOLOGY · SPACE",title:"Smart spaces",text:"Buildings could become interfaces: walls, mirrors, lights and objects respond to context and commands.",points:["💡 Responsive rooms","🔊 Ambient audio","🌡️ Auto climate","⚡ Energy management"],q:"Should technology be visible, or should it quietly disappear?"},
+biometric:{icon:"🪪",time:"TECHNOLOGY · IDENTITY",title:"Digital identity",text:"Secure identity systems could allow access and verification without carrying a phone everywhere.",points:["🔐 Authentication","🎫 Access control","💳 Secure payment","🧾 Digital credentials"],q:"How can convenience and privacy coexist?"},
+wearable:{icon:"⌚",time:"TECHNOLOGY · WEARABLES",title:"Wearables",text:"Small devices can provide health, communication and navigation features without becoming a large screen.",points:["❤️ Health signals","📳 Haptic alerts","🎙️ Voice control","🧭 Navigation"],q:"Would a smaller device feel less distracting?"},
+city:{icon:"🌐",time:"TECHNOLOGY · WORLD",title:"A connected world",text:"Transport, public services, buildings and devices could exchange information to coordinate everyday experiences.",points:["🚦 Smart traffic","🚆 Transit data","⚡ Energy grids","🏙️ Public services"],q:"Who should decide how a connected city works?"},
+privacy:{icon:"🔐",time:"BIG QUESTION · PRIVACY",title:"Who sees the data?",text:"A phone-free world could still collect enormous amounts of information through cameras, wearables, buildings and services.",points:["👁️ Sensors","📊 Personal data","🔒 Data protection","🧾 Transparency"],q:"What information should technology never collect?"},
+security:{icon:"🛡️",time:"BIG QUESTION · SECURITY",title:"What if the system fails?",text:"More connected systems can create new dependencies. Backup methods and strong security would matter.",points:["🛟 Offline backup","🔐 Cybersecurity","🚨 Emergency access","🔧 Manual controls"],q:"Should every smart system have a simple offline option?"},
+access:{icon:"🌍",time:"BIG QUESTION · ACCESS",title:"Who gets the technology?",text:"A future is useful only if its benefits are available across different communities and income levels.",points:["💰 Affordability","♿ Accessibility","📚 Digital literacy","🏘️ Equal infrastructure"],q:"How can future technology be designed for everyone?"},
+human:{icon:"🧠",time:"BIG QUESTION · HUMAN CHOICE",title:"Can we switch off?",text:"The biggest challenge may not be technical. People should still have meaningful choices about when technology is present or absent.",points:["📵 Digital breaks","⚙️ User controls","🧑 Human decisions","🌿 Quiet spaces"],q:"Would you want a real 'offline mode' for everyday life?"}
+};
+function openModal(id){const d=data[id];document.getElementById('mIcon').textContent=d.icon;document.getElementById('mTime').textContent=d.time;document.getElementById('mTitle').textContent=d.title;document.getElementById('mText').textContent=d.text;document.getElementById('mQuestion').textContent=d.q;document.getElementById('mPoints').innerHTML=d.points.map(x=>`<div class="rounded-2xl bg-black/[.04] p-4 font-semibold">${x}</div>`).join('');document.getElementById('modal').classList.add('show');document.body.style.overflow='hidden'}
+function closeModal(e){if(e && e.target!==e.currentTarget)return;document.getElementById('modal').classList.remove('show');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body></html>
