@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Register Dashboard</title>
+</head>
+<body>
+
+    <div id="registerPage">
+        <h2>Register</h2>
+
+        <form id="registerForm">
+            <input type="text" id="regName" placeholder="Enter Name">
+            <br><br>
+
+            <input type="email" id="regEmail" placeholder="Enter Email">
+            <br><br>
+
+            <input type="password" id="regPassword" placeholder="Enter Password">
+            <br><br>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p>Already have an account?</p>
+        <button id="showLogin">Login</button>
+    </div>
+
+    <div id="loginPage" style="display:none;">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Enter Email">
+            <br><br>
+
+            <input type="password" id="loginPassword" placeholder="Enter Password">
+            <br><br>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account?</p>
+        <button id="showRegister">Register</button>
+    </div>
+
+    <div id="dashboardPage" style="display:none;">
+        <h2>Dashboard</h2>
+
+        <h3 id="welcome"></h3>
+
+        <p>Welcome to your Dashboard!</p>
+
+        <button id="logout">Logout</button>
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+</html>
