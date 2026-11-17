@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+   + box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #750d85, #4b164c, #a83232);
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 40px;
+}
+
+header h1 {
+    color: gold;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+nav {
+    background-color: #2b1055;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+main {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+main h2 {
+    color: gold;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+main p {
+    font-size: 20px;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+button {
+    background: gold;
+    color: #2b1055;
+    font-style: italic;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: orange;
+    transform: scale(1.1);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0d9;
+    color: #4b164c;
+    padding: 30px;
+}
+
+center {
+    line-height: 1.8;
+}
+
+h1 {
+    color: #b8860b;
+    margin: 20px;
+    font-size: 35px;
+}
+
+h2 {
+    color: #8b4513;
+    margin: 20px;
+}
+
+h3 {
+    margin: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px;
+    line-height: 1.8;
+}
+
+img {
+    border-radius: 15px;
+    margin: 15px;
+    object-fit: cover;
+    border: 4px solid gold;
+}
+
+img:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.firework {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background: gold;
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px gold,
+        0 0 20px orange,
+        0 0 30px red;
+
+    animation: blast 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes blast {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(6);
+        opacity: 0;
+    }
+
+}
+
+.burst-particle {
+    position: fixed;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+
+    animation: burst 1.5s ease-out forwards;
+}
+
+@keyframes burst {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--dx), var(--dy)) scale(0);
+        opacity: 0;
+    }
+
+}
+
+.diya {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    animation: glowDiya 1.5s infinite alternate;
+}
+
+@keyframes glowDiya {
+
+    0% {
+        filter: drop-shadow(0 0 5px orange);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px gold);
+        transform: scale(1.1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 40px orange);
+        transform: scale(1.15);
+    }
+
+}
